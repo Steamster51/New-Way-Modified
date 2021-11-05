@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Way Electric</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <link href="style.css" rel="stylesheet" />
+    <script src="script.js"></script>
+</head>
+<body>
+    <header id="headernav" class="bg-dark">
+        <div>
+            <nav>
+                <div class="navbar-brand">New Way Electric</div>
+                <a href="#" onclick="togle()" class="toggle-button">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </a>
+                <div  class="navlinks">
+                    <ul>
+                        <li>
+                            <a class="navli" href="#home">Home</a>
+                        </li>
+                        <hr style="color: aliceblue;"/>
+                        <li>
+                            <a class="navli" href="#aboutus">About Us</a>
+                        </li>
+                        <hr style="color: aliceblue;"/>
+                        <li>
+                            <a class="navli" href="#services">Services</a>
+                        </li>
+                        <hr style="color: aliceblue;"/>
+                        <li>    
+                            <a class="navli" href="#contact">Contact Us</a>
+                        </li>
+                        <hr style="color: aliceblue;"/>
+                        <li>
+                            <a class="navli" href="#projects">Projects</a>
+                        </li>
+                        <hr style="color: aliceblue;"/>
+                        <li>
+                            <a class="navli" href="#quote">Request Quote Form</a>
+                        </li>
+                        <hr id="lasthr" style="color: aliceblue;"/>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="home">
+            <div id="images">
+                <div id="mainimg">
+                    <img src="img/newwayheader.jpg" width="100%" height="100%"/>
+                </div>
+                <div id="mainimg1">
+                    <img id="reg" src="img/electrical contractor registration.jpg" width="100%" height="100%"/>
+                </div>
+                <div id="mainimg2">
+                    <img id="lic" src="img/licenced electrical contractor.jpg" width="100%" height="100%"/>
+                </div>
+            </div>
+           <div id="homediv">
+                <div id="truckimgdiv">
+                    <img src="img/marinatruck.jpg" width="90%" height="630px" />
+                </div>
+                <!--<div id="licensediv">
+                    <img src="img/electrical contractor registration.jpg" width="80%" height="300px" />
+                    <img src="img/licenced electrical contractor.jpg" width="80%" height="300px" />
+                </div>-->
+                <div id="welcometextdiv">
+                    <h2>Welcome to <strong>New Way Electric</strong> – The Right People for the Job</h2>
+                    <hr/>
+                    <p>
+                        New Way Electric offers an extensive variety of Commercial, Residential and Industrial electrical services.
+                        Whether you need new wiring, emergency repairs, ESA inspection or complete electrical system overhaul - WE CAN HELP.
+                    </p>
+                </div>
+           </div>
+           <br/>
+        </section>
+        <section id="aboutus">
+            <h2><b>About Us</b></h2>
+            <hr/>
+            <h4>
+                New Way Electric is in business since 2004 to service the growing construction and maintenance needs of the Greated Toronto Area, and now is proud to expand services into Durham, Clarington and Peterborough Areas.
+                <br/><br/>
+                We are a full-service electrical contractor providing services to general contractors, property management companies and homeowners with all their electrical needs.
+                Our mission is to provide you with quality services that you can trust.
+            </h4>
+            <br/><br/>
+            <h2 style="color:rgb(150, 150, 150);">CALL  FOR  QUOTE:<br/> 647-985-8645</h2>
+            <br/><br/>
+            <h4>
+                New Way Electric is in good standing with WSIB, Electrical Safety Authority, Insured and Bonded 
+            </h4>
+            <br/>
+        </section>
+        <section id="services" ng-app="commerciallist" ng-controller="list1Ctrl">
+            <h2><b>Services</b></h2>
+            <hr/>
+            <h4>
+                Whether you're looking to replace lighting in your home, office or a complete rewire of your industrial space - WE CAN HELP
+                New Way Electric offers an extensive variety of Commercial, Residential and Industrial services:
+            </h4>
+            <br/>
+            <h4 id="searchtoptext">Can't find service?</h4>
+            <h4 id="searchtoptext">Search for it!</h4>
+            <p><input type="text" ng-model="filterservices" placeholder="Search"/></p>
+            <div id="commercialservices">
+                <h3>Commercial:</h3>
+                <hr/>
+                <ul>
+                    <li ng-repeat="commercial in commercials | filter : filterservices">{{commercial}}</li>
+                </ul>
+            </div>
+            <div id="residentialservices">
+                <h3>Residential:</h3>
+                <hr/>
+                <ul>
+                    <li ng-repeat="residential in recidentials | filter : filterservices">{{residential}}</li>
+                </ul>
+            </div>
+            <div id="industrialservices">
+                <h3>Industrial:</h3>
+                <hr>
+                <ul>
+                    <li ng-repeat="industrial in industrials | filter : filterservices">{{industrial}}</li>
+                </ul>
+            </div>
+            <br/>
+        </section>
+        <section id="contact">
+            <h2><b>Contact Us</b></h2>
+            <hr/>
+            <div>
+                <h4>Please contact us with any questions you may have about our services.  We will be happy to schedule a consultation to discuss your needs.</h4>
+                <br/>
+                <h3>PHONE: (647) 985-8645</h3>
+                <br>
+                <h4>
+                    EMAIL: <a href="mailto:d.rudenko51@@gmail.com">contact@new-way-electric.ca</a>
+                    <br/>
+                    <em style="text-decoration: underline;"><b>New Way Electric</b></em>
+                    <br/>
+                    ECRA/ESA Lic# 7010028
+                    <br/>
+                    5177 Liberty Street North
+                    <br/>
+                    Bowmanville, ON, L1C 6K9</h4>
+            </div>
+            <br/>
+        </section>
+        <section id="projects">
+            <h2><b>Projects</b></h2>
+            <hr/>
+            <div>
+                <img id="image1" src="img/panel.jfif" />
+                <img id="image2" src="img/panel1.jfif" />
+                <img id="image3" src="img/projectpic3.jpg" />
+                <img id="image4" src="img/projectpic4.jpg" />
+            </div>
+            <div>
+                <img id="image5" src="img/projectpic5.jpg" />
+                <img id="image6" src="img/projectpic6.jpg" />
+                <img id="image7" src="img/projectpic7.jpg" />
+                <img id="image8" src="img/projectpic8.jpg" />
+            </div>
+            <div>
+                <img id="image9" src="img/projectpic9.jpg" />
+                <img id="image10" src="img/projectpic10.jpg" />
+                <img id="image11" src="img/projectpic11.jpg" />
+                <img id="image12" src="img/projectpic12.jpg" />
+            </div>
+            <br/>
+        </section>
+        <section id="quote">
+            <h2><b>Request a Quote!</b></h2>
+            <hr/>
+            <form action="https://formsubmit.co/d.rudenko51@gmail.com" method="post">
+                <p>First Name: <br/><input name="First name:" type="text" placeholder="Enter first name" required/></p>
+                <p>Last Name: <br/><input name="Last Name:" type="text" placeholder="Enter last name" required/></p>
+                <p>Email:   <br/>   <input name="From:" type="email" placeholder="Enter email" required/></p>
+                <p>Description:<br/><textarea name="Description:" type="text" placeholder="Enter your description here" required></textarea></p>
+                <button class="btn btn-primary" type="submit">Request</button>
+            </form>
+            <br>
+        </section>
+    </main>
+    <footer class="bg-dark">
+        <h6>&copy;Copyright 2021 New Way Electric Inc</h6>
+    </footer>
+</body>
+</html>
