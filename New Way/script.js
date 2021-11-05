@@ -46,11 +46,11 @@ $(document).ready(function(){
     if ($(window).width() <= 600) {  
 
         $(".toggle-button").click(function(){
-            $(".navlinks").slideToggle(700);
+            $(".navlinks").slideDown(700);
         });
 
         $(".navli").click(function(){
-            $(".navlinks").slideToggle(700);
+            $(".navlinks").slideUp(700);
         });
 
     }
