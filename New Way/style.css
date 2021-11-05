@@ -1,0 +1,484 @@
+header{
+    position: fixed;
+    width: 100%;
+    /*background-color: rgb(0, 119, 182);*/
+    text-align: center;
+    display: inline-block;
+    height: 3em;
+    transition: 0.5s;
+}
+
+.navbar-brand{
+    display: none;
+}
+
+header h1{
+    margin: 7px;
+    color: whitesmoke;
+    text-shadow: 2px 5px 5px black;
+}
+
+nav ul{
+    margin: 0;
+    display: inline-flex;
+    list-style: none;
+}
+
+nav li{
+    padding: 0.5em;
+}
+
+nav li a{
+    padding-left: 1em;
+    padding-right: 1em;
+    color: blanchedalmond;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.toggle-button{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 35px;
+    height: 30px;
+}
+
+.toggle-button .bar{
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+nav li a:hover{
+    color: rgb(187, 235, 236);
+    text-shadow: 3px 3px 7px whitesmoke;
+}
+
+nav li:hover{
+    border-bottom: 2.5px solid whitesmoke;
+}
+
+section{
+    height: auto;
+    align-items: center;
+    text-align: center;
+}
+
+#brand{
+    display: none;
+}
+
+/*Home Section
+-------------------------------------------------------------------------------------------------------*/
+
+section #home{
+    text-align: center;
+}
+
+#home{
+    height: 100%;
+}
+
+#images div{
+    display: inline-flex;
+    vertical-align: middle;
+    margin: 1em;
+    margin-top: 5em;
+    margin-bottom: 4em;
+}
+
+#mainimg{
+    width: 60%;
+}
+
+#mainimg1{
+    width: 15%;
+}
+
+#mainimg2{
+    width: 15%;
+}
+
+/*#home img{
+    margin-top: 1em;
+    display: inline-block;
+}
+
+#reg{
+    width: 10%;
+    height: 100%;
+}
+
+#lic{
+    width: 10%;
+    height: 100%;
+}*/
+
+#homediv div{
+    display: inline-block;
+    width: 45%;
+    height: 100%;
+    margin: 1em;
+    vertical-align: middle;
+}
+
+/*#truckimgdiv{
+    width: 60%;
+}
+
+#licensediv{
+    width: 35%;
+}*/
+
+#welcometextdiv{
+    color: black;
+    margin: 1.5em;
+    text-align: center;
+}
+
+#welcometextdiv p{
+    font-size: 22px;
+}
+
+/*About Section
+-------------------------------------------------------------------------------------------------------*/
+
+#aboutus{
+    color: black;
+    padding: 2em;
+}
+
+/*Services Section
+-------------------------------------------------------------------------------------------------------*/
+
+#services{
+    height: auto;
+    color: black;
+}
+
+#services input{
+    border: 2px solid black;
+    width: 500px;
+    text-align: center;
+    font-size: 18px;
+}
+
+#searchtoptext{
+    color: red;
+}
+
+#services h4{
+    padding-right: 2em;
+    padding-left: 2em;
+}
+
+#services div{
+    display: inline-block;
+    vertical-align: top;
+    height: 37em;
+    width: 30%;
+    border: 1px solid whitesmoke;
+    margin: 1em;
+    padding:1em;
+}
+
+#services div li{
+    font-size: 22px;
+    text-align: left;
+}
+
+
+
+/*Contact Section
+-------------------------------------------------------------------------------------------------------*/
+
+#contact{
+    text-align: center;
+}
+
+/*Projects Section
+-------------------------------------------------------------------------------------------------------*/
+
+#projects div img{
+    display: inline-block;
+    height: 300px;
+    width: 20%;
+    margin: 1em;
+    border: 3px solid black;
+    box-shadow: 6px 6px 15px black;
+}
+
+/*Quote Section
+-------------------------------------------------------------------------------------------------------*/
+
+
+#quote form input{
+    width: 300px;
+    border: 2px solid black;
+}
+
+#quote form textarea{
+    border: 2px solid black;
+    width: 300px;
+    height: 100px;
+}
+
+#quote form p{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+footer{
+    margin-bottom: 0;
+    background-color: dimgrey;
+    color: whitesmoke;
+    text-align: center;
+    height: 30px;
+}
+
+footer h6{
+    margin: 0;
+    padding-top: 0.3em;
+}
+
+#tydiv{
+    align-items: center;
+    text-align: center;
+    width: 80%;
+    height: 80%;
+    border: 3px solid blue;
+    box-shadow: 5px 5px 20px blue;
+    margin-left: 10%;
+    margin-right: 10%;
+    vertical-align: middle;
+    margin-top: 5em;
+}
+
+#tydiv a{
+    width: 50%;
+}
+
+@media only screen and (max-width: 600px){
+
+    main{
+        width: 100%;
+    }
+    
+    header{
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    #home{
+        margin-top: 0;
+    }
+
+    .toggle-button{
+        display: flex;
+        width: 40px;
+        height: 30px;
+        margin-right: 2em;
+        margin-top: 0.1em;
+    }
+
+    header ul{
+        display: block;
+    }
+
+    .navlinks, .navbar-brand{
+        display: block;
+        width: 100%;
+    }
+
+    nav .navbar-brand{
+        padding: 0;
+        color: whitesmoke;
+        font-size: 25px;
+        text-align: left;
+        margin-top: 0.45em;
+        height: 2em;
+        padding-left: 0.5em;
+    }
+
+    .navlinks{
+        display: none;
+        width: 100%;
+    }
+
+    .navlinks ul hr{
+        margin: 0;
+    }
+
+    .navlinks ul{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .navlinks ul li a{
+        font-size: 25px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .navlinks ul li{
+        margin-top: 1.5em;
+        margin-bottom: 1.5em;
+        padding: 0;
+    }
+
+    .navlinks.active{
+        display: flex;
+    }
+
+    nav li:hover{
+        border-bottom: none;
+    }
+
+    /*Home Section
+    ---------------------------------------*/
+
+    #home{
+        width: 98%;
+    }
+
+    #home #images #mainimg{
+        display: none;
+    }
+
+    #home #images div{
+        display: inline-block;
+        width: 45%;
+        margin-left: 2%;
+        margin-right: 1%;
+    }
+
+    #homediv{
+        display: block;
+    }
+
+    #homediv div{
+        width: 102%;
+        margin: 0;
+        display: block;
+    }
+
+    #truckimgdiv img{
+        width: 95%;
+        height: 100%;
+        margin-bottom: 1em;
+    }
+
+    #welcometextdiv h2{
+        padding-right: 1em;
+        padding-left: 1em;
+    }
+
+    #welcometextdiv p{
+        padding-right: 1em;
+        padding-left: 1em;
+    }
+
+    /*About Section
+    ----------------------------*/
+
+    #aboutus{
+        padding: 0;
+    }
+
+    #aboutus h4{
+        padding-right: 1.5em;
+        padding-left: 1em;
+    }
+
+    #aboutus h2{
+        padding-right: 1.5em;
+        padding-left: 1em;
+    }
+
+     /*Services Section
+    -----------------------------*/
+
+    #services div{
+        display: block;
+        width: 100%;
+        border: none;
+        height: auto;
+        margin: 0;
+    }
+
+    #services #searchtoptext{
+        color: red;
+    }
+
+    #services input{
+        width: 90%;
+        text-align: center;
+        margin-top: 0.5em;
+        border: 2px solid black;
+    }
+
+    #services div hr{
+        display: none;
+    }
+
+    #services div li{
+        padding-right: 1.5em;
+    }
+
+    /*Contact Section
+    -----------------------------*/
+
+    #contact h2{
+        margin-top: 1em;
+    }
+
+    #contact h4{
+        padding-left: 0.5em;
+        padding-right: 1.3em;
+    }
+
+    /*Project Section
+    -----------------------------*/
+    #projects div{
+        text-align: center;
+        align-content: center;
+        display: block;
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+
+    #projects div img{
+        display: block;
+        width: 100%;
+        margin: 0;
+        margin-bottom: 1.3em;
+    }
+
+    /*Quote Section
+    -----------------------------*/
+    #quote{
+        width: 100%;
+    }
+
+    #quote form input, textarea {
+        border: 2px solid black;
+        font-size: 18px;
+    }
+
+    #quote form p{
+        font-size: 22px;
+    }
+
+    footer{
+        width: 100%;
+        height: 2em;
+    }
+
+}
