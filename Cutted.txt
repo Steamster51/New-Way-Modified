@@ -1,0 +1,65 @@
+}
+
+header h1{
+    margin: 7px;
+    color: whitesmoke;
+    text-shadow: 3px 5px 5px black;
+}
+
+header nav{
+    margin-top: 2em;
+}
+
+nav ul{
+    list-style: none;
+    padding-left: 20px;
+}
+
+nav li a{
+    color: blanchedalmond;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+nav li a:hover{
+    color: cadetblue;
+    text-shadow: 5px 5px 7px black;
+}
+
+.navbar-brand{
+    font-size: 23px;
+}
+
+header div{
+    display: block;
+    left: 5px;
+}
+
+#img1{
+    position: fixed;
+    width: 190px;
+}
+
+#img2{
+    position: fixed;
+    width: 190px;
+    margin-top: 13em;
+}
+
+
+
+
+
+
+
+
+        <div>
+            <h1 class="nav navbar-brand">New Way Electric</h1>
+        </div>
+
+            <div id="img1">
+                <img src="img/licenced electrical contractor.jpg"  width="100%"/>
+            </div>
+            <div id="img2">
+                <img src="img/electrical contractor registration.jpg" width="100%"/>
+            </div>
